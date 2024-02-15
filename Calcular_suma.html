@@ -23,6 +23,17 @@
         .input-container input[type="text"] {
             width: 150px;
         }
+
+        .resta{
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        .suma{
+            background-color: green;
+            border-radius: 10px;
+        }
+
 		
     </style>
 </head>
@@ -41,8 +52,8 @@
                 <label for="num2">Segundo número:</label>
                 <input type="text" id="num2">
             </div>
-            <input type="button" value="Calcular suma"  onclick="calcularSuma()">
-            <input type="button" value="Calcular resta"  onclick="calcularResta()">
+            <input type="button" class="suma" value="Calcular suma"  onclick="calcularSuma()">
+            <input type="button" class="resta" value="Calcular resta"  onclick="calcularResta()">
 
         </form>
 
