@@ -34,6 +34,16 @@
             border-radius: 10px;
         }
 
+        .multiplicacion{
+            background-color: rgb(218, 87, 0);
+            border-radius: 10px;
+        }
+
+        .division{
+            background-color: rgb(161, 0, 173);
+            border-radius: 10px;
+        }
+
         
 
 		
@@ -57,6 +67,8 @@
             <input type="button" class="suma" value="Calcular suma"  onclick="calcularSuma()">
             <input type="button" class="resta" value="Calcular resta"  onclick="calcularResta()">
             <input type="button" class="multiplicacion" value="Calcular Multiplicacion"  onclick="calcularMultiplicacion()">
+            <input type="button" class="division" value="Calcular Division"  onclick="calcularDivision()">
+
 
 
         </form>
@@ -116,12 +128,33 @@ function calcularMultiplicacion() {
         
 
         // Mostrar el resultado en el elemento con id "resultado"
-        document.getElementById("resultado").innerHTML = "El resultado de la multiplicacion es: " + multiplicacion;
+        document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + multiplicacion;
     } else {
         // Mostrar un mensaje de error si los valores no son números
         document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
     }
 }
+
+function calcularDivision() {
+    // Obtener los valores de los campos de entrada
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    // Verificar si ambos valores son números
+    if (!isNaN(num1) && !isNaN(num2)) {
+        // Calcular la suma
+        var division = num1 / num2;
+        
+
+        // Mostrar el resultado en el elemento con id "resultado"
+        document.getElementById("resultado").innerHTML = "El resultado de la division es: " + division;
+    } else {
+        // Mostrar un mensaje de error si los valores no son números
+        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+    }
+}
+
+
 </script>
 
 </body>
